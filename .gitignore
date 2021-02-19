@@ -1,16 +1,10 @@
 # CMake
 cmake-build-*/
 
-# File-based project format
-*.iws
-
 # IntelliJ
 out/
 .idea/
 Java.iml
-
-# Cradle
-.cradle/
 
 # NetBeans
 **/nbproject/
@@ -23,3 +17,9 @@ nbdist/
 # vscode
 .vscode/
 *.code-workspace
+
+# Cradle
+.cradle/
+
+# Outros
+*.iws
