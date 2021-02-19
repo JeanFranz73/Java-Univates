@@ -9,20 +9,17 @@ out/
 .idea/
 Java.iml
 
-### NetBeans ###
-**/nbproject/private/
-**/nbproject/Makefile-*.mk
-**/nbproject/Package-*.bash
+# Cradle
+.cradle/
+
+# NetBeans
+**/nbproject/
 build/
 nbbuild/
 dist/
 nbdist/
 .nb-gradle/
 
-### vscode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+# vscode
+.vscode/
 *.code-workspace
