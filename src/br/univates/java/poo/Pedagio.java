@@ -31,23 +31,23 @@ public class Pedagio {
             System.out.println("Digite o número correspondente ao veículo:");
             x = scanner.nextInt();
 
-            if(x == 1) {
+            if (x == 1) {
                 total += 4.6;
                 qtyCarros++;
                 System.out.println("Automóvel computado!");
-            } else if(x == 2) {
+            } else if (x == 2) {
                 total += 2.3;
                 qtyMotos++;
                 System.out.println("Motocicleta computada!");
-            } else if(x == 3) {
+            } else if (x == 3) {
                 System.out.println("Total de automóveis: " + qtyCarros);
                 System.out.println("Total de motos: " + qtyMotos);
-                System.out.println();
                 System.out.print("Valor total: R$");
                 System.out.printf("%.2f", total);
                 i = true;
             } else {
-
+                System.out.println("Valor inválido! Digite novamente.");
+                System.out.println();
             }
 
         }
