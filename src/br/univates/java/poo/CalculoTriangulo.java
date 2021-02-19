@@ -20,10 +20,10 @@ public class CalculoTriangulo {
         System.out.println("Digite o primeiro lado:");
         a = scanner.nextDouble();
 
-        System.out.println("Digite o primeiro lado:");
+        System.out.println("Agora, digite o segundo lado:");
         b = scanner.nextDouble();
 
-        System.out.println("Digite o primeiro lado:");
+        System.out.println("Por último, digite o terceiro lado:");
         c = scanner.nextDouble();
 
         p = (a + b + c) / 2;

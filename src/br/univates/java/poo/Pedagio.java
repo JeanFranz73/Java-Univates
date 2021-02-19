@@ -27,7 +27,7 @@ public class Pedagio {
         double total = 0;
         boolean i = false;
 
-        while (i == false) {
+        while (!i) {
             System.out.println("Digite o número correspondente ao veículo:");
             x = scanner.nextInt();
 

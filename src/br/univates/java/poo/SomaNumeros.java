@@ -20,7 +20,7 @@ public class SomaNumeros {
         int total = 0;
         boolean i = false;
 
-        while(i == false) {
+        while(!i) {
             System.out.println("Digite um número:");
             x = scanner.nextInt();
 
