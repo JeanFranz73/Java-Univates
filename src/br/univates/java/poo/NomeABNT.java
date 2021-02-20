@@ -21,18 +21,17 @@ public class NomeABNT {
 
         Scanner scanner = new Scanner(System.in);
 
-        int x;
         String nomeCompleto;
 
         System.out.println("Digite seu nome completo:");
         nomeCompleto = scanner.nextLine();
 
-        String[] nomeSeparado = nomeCompleto.split(" ", 0);
+        String[] nomeSeparado = nomeCompleto.split(" ");
 
         System.out.print(nomeSeparado[nomeSeparado.length - 1].toUpperCase() + ", ");
 
         for (int i = 0; i < nomeSeparado.length - 1; i++) {
-            System.out.print(nomeSeparado[i].toUpperCase().charAt(2) + ". ");
+            System.out.print(nomeSeparado[i].toUpperCase().charAt(0) + ". ");
         }
     }
 }
