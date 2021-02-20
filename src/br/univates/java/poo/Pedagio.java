@@ -49,8 +49,6 @@ public class Pedagio {
                 System.out.println("Valor inválido! Digite novamente.");
                 System.out.println();
             }
-
         }
-
     }
 }
