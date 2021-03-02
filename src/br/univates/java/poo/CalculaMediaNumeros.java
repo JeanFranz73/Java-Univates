@@ -17,12 +17,12 @@ public class CalculaMediaNumeros {
 
         Scanner scanner = new Scanner(System.in);
 
-        double x, valores = 0, total = 0;
+        int x, valores = 0, total = 0;
         boolean i = false;
 
         while(!i) {
             System.out.println("Digite um número inteiro:");
-            x = scanner.nextDouble();
+            x = scanner.nextInt();
 
             if (x > 0) {
                 valores += x;
