@@ -1,4 +1,4 @@
-package br.univates.java.poo;
+package br.univates.java.poo.pratica2;
 
 import java.util.Random;
 

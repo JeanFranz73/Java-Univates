@@ -18,12 +18,10 @@ public class FibonacciMetodo {
         for (int i = 0; i < x; i++) {
             if (i == 0) {
                 valor = 1;
-                System.out.println(valor);
             } else {
                 valor = n1 + n2;
                 n1 = n2;
                 n2 = valor;
-                System.out.println(valor);
             }
         }
         return valor;
