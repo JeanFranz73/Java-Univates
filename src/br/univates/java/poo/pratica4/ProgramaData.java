@@ -33,6 +33,8 @@ public class ProgramaData {
                 System.out.println(data.getDataCompletaAtual());
             } else if (x == 0) {
                 break;
+            } else {
+                System.out.println("Opção inválida! Tente novamente.");
             }
         }
     }
