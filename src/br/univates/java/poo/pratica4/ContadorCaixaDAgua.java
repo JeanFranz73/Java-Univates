@@ -7,14 +7,14 @@ public class ContadorCaixaDAgua {
 
         Scanner scanner = new Scanner(System.in);
         CaixaDAgua caixa = new CaixaDAgua();
-        boolean acao = true;
+        boolean acao;
 
         while (true) {
             System.out.println("----------------------------");
             System.out.println("Caixa d'água (25 mil litros)");
             System.out.println("1. Adicionar valor");
             System.out.println("2. Zerar valor");
-            System.out.println("3. Finalizar");
+            System.out.println("0. Finalizar");
             double x = scanner.nextDouble();
             if (x == 1) {
                 acao = true;
@@ -24,11 +24,10 @@ public class ContadorCaixaDAgua {
                     x = scanner.nextDouble();
                     if (x > 0) {
                         caixa.addConsumo(x);
-                        if (caixa.consumo > caixa.limite) {
+                        if (caixa.getConsumo() > caixa.getLimite()) {
                             System.out.println("----------------------------");
                             System.out.println("!!! Operando acima da capacidade máxima !!!");
                         }
-                        System.out.println("----------------------------");
                         System.out.println("Valor adicionado!");
                     } else if (x == 0) {
                         acao = false;
@@ -39,7 +38,7 @@ public class ContadorCaixaDAgua {
             } else if (x == 2) {
                 caixa.zeraContador();
                 System.out.println("Contador zerado!");
-            } else if (x == 3) {
+            } else if (x == 0) {
                 System.out.println("Valor total: " + caixa.getConsumo() + " litros");
                 break;
             } else {

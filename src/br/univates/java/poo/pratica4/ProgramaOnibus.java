@@ -19,7 +19,7 @@ public class ProgramaOnibus {
 
             if (x != 0) {
                 if (onibus.getPassageiros() > onibus.getCapacidade()) {
-                    System.out.println("Limite máximo é de: " + onibus.getCapacidade() + "pessoas");
+                    System.out.println("O limite máximo do ônibus é de " + onibus.getCapacidade() + " pessoas");
                     onibus.setPassageiros(onibus.getCapacidade());
                 } else if (onibus.getPassageiros() < 0) {
                     System.out.println("Impossivel sair mais pessoas do que entraram");
@@ -29,9 +29,9 @@ public class ProgramaOnibus {
                 System.out.println("Total Passageiros: " + onibus.getTotalPassageiros());
                 System.out.println("Lugares vagos: " + (onibus.getCapacidade() - onibus.getPassageiros()));
             } else {
-                System.out.print("Total: ");
+                System.out.print("Total: R$");
                 System.out.printf("%.2f", onibus.caixaExpediente());
-                System.out.print(" reais em " + onibus.getParadas() + " paradas com o total de " + onibus.getTotalPassageiros() + " passageiros.");
+                System.out.print(" em " + onibus.getParadas() + " paradas com o total de " + onibus.getTotalPassageiros() + " passageiros.");
                 break;
             }
         }
