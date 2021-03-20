@@ -13,6 +13,10 @@ public class Atleta {
     private String nome;
     private double[] tempo = new double[0];
 
+    public void setNome(String nome) {
+        this.nome = nome.toUpperCase().charAt(0) + nome.substring(1).toLowerCase();
+    }
+
     public void addTempo(double x) {
         double[] result = Arrays.copyOf(getTempo(), getTempo().length + 1);
         result[result.length - 1] = x;
