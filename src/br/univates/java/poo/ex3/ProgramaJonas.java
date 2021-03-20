@@ -2,7 +2,7 @@ package br.univates.java.poo.ex3;
 
 import java.util.Scanner;
 
-public class ProgramaJones {
+public class ProgramaJonas {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -18,7 +18,7 @@ public class ProgramaJones {
                 Opção inválida! Tente novamente.""";
         String menu = """
                 ------------------------
-                |   Planilha de Jones  |
+                |   Planilha de Jonas  |
                 |  1. Adicionar tempo  |
                 |  2. Resumo total     |
                 |  3. Resumo de atleta |
@@ -66,12 +66,12 @@ public class ProgramaJones {
                 }
             } else if (x == 2) {
                 System.out.printf("Média geral dos atletas: %.3f segundos\n", planilha.getMediaTempoAtletas());
-                System.out.printf("Volta mais rápida: %.3f segundos\n", planilha.getMenorTempoTodos());
-                System.out.printf("Volta mais lenta: %.3f segundos\n", planilha.getMaiorTempoTodos());
+                System.out.printf("Volta mais rápida: de " + planilha.getAtletaComMenorTempo().getNome() + ", com %.3f segundos\n", planilha.getAtletaComMenorTempo().getMenorTempo());
+                System.out.printf("Volta mais lenta: de " + planilha.getAtletaComMaiorTempo().getNome() + ", com %.3f segundos\n", planilha.getAtletaComMaiorTempo().getMenorTempo());
+                System.out.println("------------------------");
                 System.out.println("Atletas que fizeram a volta com menos de 10 segundos:");
                 for (int i = 0; i < planilha.getAtletasComMenosDe10().length; i++) {
-                    System.out.print("- " + planilha.getAtletasComMenosDe10()[i].getNome() + ", com ");
-                    System.out.printf("%.3f segundos\n", planilha.getAtletasComMenosDe10()[i].getMenorTempo());
+                    System.out.printf("- " + planilha.getAtletasComMenosDe10()[i].getNome() + ", com %.3f segundos\n", planilha.getAtletasComMenosDe10()[i].getMenorTempo());
                 }
 
             } else if (x == 3) {

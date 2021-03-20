@@ -26,26 +26,23 @@ public class Planilha {
         return soma / atleta.length;
     }
 
-    public double getMenorTempoTodos() {
-        double result = Double.POSITIVE_INFINITY;
+    public Atleta getAtletaComMenorTempo() {
+        Atleta result = new Atleta();
+        result.addTempo(Double.POSITIVE_INFINITY);
         for (int i = 0; i < atleta.length; i++) {
-            for (int j = 0; j < atleta[i].getTempo().length; j++) {
-                if (atleta[i].getTempo()[j] < result) {
-                    result = atleta[i].getTempo()[j];
-                }
+            if (atleta[i].getMenorTempo() < result.getMenorTempo()) {
+                result = atleta[i];
             }
         }
         return result;
     }
 
-    public double getMaiorTempoTodos() {
-        double result = Double.NEGATIVE_INFINITY;
-        Atleta atletaResult;
+    public Atleta getAtletaComMaiorTempo() {
+        Atleta result = new Atleta();
+        result.addTempo(Double.NEGATIVE_INFINITY);
         for (int i = 0; i < atleta.length; i++) {
-            for (int j = 0; j < atleta[i].getTempo().length; j++) {
-                if (atleta[i].getTempo()[j] > result) {
-                    result = atleta[i].getTempo()[j];
-                }
+            if (atleta[i].getMenorTempo() > result.getMenorTempo()) {
+                result = atleta[i];
             }
         }
         return result;
