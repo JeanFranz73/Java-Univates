@@ -18,7 +18,7 @@ public class Tela {
                 2. Adicionar caldo de cana
                 3. Engarrafar cachaça pronta
                 4. Limpar reservatório de resíduos
-                5. Status atual do alambiqu
+                5. Status atual do alambique
                 0. Finalizar""";
 
         while (true) {
@@ -61,6 +61,7 @@ public class Tela {
                 System.out.println("Reservatório de cachaça:        " + (alambique.getReservaCachaca().getQuantidade() / 1000) + "/" + (alambique.getReservaCachaca().getLimite() / 1000));
                 System.out.println("Reservatório intermediário:     " + (alambique.getReservaIntermediario().getQuantidade() / 1000) + "/" + (alambique.getReservaIntermediario().getLimite() / 1000));
                 System.out.println("Garrafas prontas para despacho: " + alambique.getGarrafasCheias());
+                System.out.println("A máquina foi utilizada " + alambique.getNumBateladas() + " vezes");
             } else if (x == 0) {
                 break;
             } else {
