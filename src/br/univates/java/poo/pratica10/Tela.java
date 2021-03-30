@@ -30,15 +30,20 @@ public class Tela {
         System.out.println("1. Alambique 1: comporta " + (alambique1.getReservaCachaca().getLimite() / 1000) + " litros de cachaça e " + (alambique1.getReservaCana().getLimite() / 1000) + " litros de cana");
         System.out.println("2. Alambique 2: comporta " + (alambique2.getReservaCachaca().getLimite() / 1000) + " litros de cachaça e " + (alambique2.getReservaCana().getLimite() / 1000) + " litros de cana");
         System.out.println("3. Alambique 3: comporta " + (alambique3.getReservaCachaca().getLimite() / 1000) + " litros de cachaça e " + (alambique3.getReservaCana().getLimite() / 1000) + " litros de cana");
-        x = scanner.nextInt();
-        if (x == 1) {
-            alambique = alambique1;
-        } else if (x == 2) {
-            alambique = alambique2;
-        } else if (x == 3) {
-            alambique = alambique3;
-        } else {
-            System.out.println("----------------------\nValor indisponível! Adicione outro valor.");
+        while (true) {
+            x = scanner.nextInt();
+            if (x == 1) {
+                alambique = alambique1;
+                break;
+            } else if (x == 2) {
+                alambique = alambique2;
+                break;
+            } else if (x == 3) {
+                alambique = alambique3;
+                break;
+            } else {
+                System.out.println("----------------------\nValor indisponível! Adicione outro valor.");
+            }
         }
 
         while (true) {
