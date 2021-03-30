@@ -29,9 +29,6 @@ public class Alambique {
                 break;
             }
             result = true;
-            reservaCana.removeQtde(1000);
-            reservaCachaca.addQtde(400);
-            reservaIntermediario.addQtde(200);
         }
         return result;
     }
