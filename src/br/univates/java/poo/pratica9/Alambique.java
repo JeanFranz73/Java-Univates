@@ -11,7 +11,7 @@ public class Alambique {
     private Reservatorio reservaCachaca;
     private Reservatorio reservaIntermediario;
 
-    private int garrafasCheias;
+    private int garrafasCheias, numBateladas;
     private double tamanhoGarrafas;
 
     public Alambique(double limiteGarrafas) {
@@ -29,6 +29,7 @@ public class Alambique {
                 break;
             }
             result = true;
+            setNumBateladas(getNumBateladas() + 1);
         }
         return result;
     }
