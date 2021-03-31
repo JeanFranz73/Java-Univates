@@ -11,10 +11,8 @@ public class Alambique {
     private Reservatorio reservaCachaca;
     private Reservatorio reservaIntermediario;
 
-    private int garrafasCheias;
+    private int garrafasCheias, numBateladas;
     private double tamanhoGarrafas;
-
-    public Alambique() {}
 
     public Alambique(double limiteCana, double limiteCachaca, double limiteInterm, double limiteGarrafas) {
         this.reservaCana = new Reservatorio(limiteCana);
@@ -30,6 +28,7 @@ public class Alambique {
             if (!reservaCana.removeQtde(1000) || !reservaCachaca.addQtde(400) || !reservaIntermediario.addQtde(200)) {
                 break;
             }
+            setNumBateladas(getNumBateladas() + 1);
             result = true;
         }
         return result;

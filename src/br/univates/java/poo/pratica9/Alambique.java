@@ -28,8 +28,8 @@ public class Alambique {
             if (!reservaCana.removeQtde(1000) || !reservaCachaca.addQtde(400) || !reservaIntermediario.addQtde(200)) {
                 break;
             }
-            result = true;
             setNumBateladas(getNumBateladas() + 1);
+            result = true;
         }
         return result;
     }
