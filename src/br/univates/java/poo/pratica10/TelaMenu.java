@@ -37,6 +37,7 @@ public class TelaMenu {
             scanner.nextLine();
             if (x == 1) {
                 if (getAlambique().iniciaProducao()) {
+                    alambique.setNumBateladas(alambique.getNumBateladas() + 1);
                     System.out.println("----------------------\nProdução completa!");
                 } else {
                     System.out.println("----------------------\nVerifique o espaço nos reservatórios e a quantidade de caldo de cana disponível.");
