@@ -26,9 +26,7 @@ public class Menu {
             System.out.println("---------------------");
         }
 
-
         System.out.println("Total: " + arquivo.qtdeColegas() + " alunos");
-
 
     }
 }
