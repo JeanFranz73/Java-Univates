@@ -112,7 +112,6 @@ public class TelaMenu {
         prato.setObs(obs);
 
 
-
         return prato;
     }
 
