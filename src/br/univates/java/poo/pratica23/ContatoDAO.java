@@ -39,4 +39,46 @@ public class ContatoDAO extends ContatoDAOHelper {
         arquivo.fecharArquivo();
         return contatos;
     }
+
+    public boolean editar(int id, int opc, String info) {
+        boolean result = false;
+        id--;
+        Arquivo arquivo = new Arquivo("C:\\contatos.csv");
+        ArrayList<Contato> contatos = ler();
+
+        if (isOpcaoValida(opc)) {
+            if (opc == 1) {
+                contatos.get(id).setNome(info);
+            } else if (opc == 2) {
+                contatos.get(id).setTelefone(info);
+            } else if (opc == 3) {
+                contatos.get(id).setEmail(info);
+            }
+        }
+
+        if (arquivo.abrirEscrita()) {
+            for (Contato c : contatos) {
+                arquivo.escreverLinha(c.getContatoFormatado());
+            }
+            result = true;
+        }
+        arquivo.fecharArquivo();
+        return result;
+    }
+
+    public boolean excluir(int id) {
+        boolean result = false;
+        id--;
+        Arquivo arquivo = new Arquivo("C:\\contatos.csv");
+        ArrayList<Contato> contatos = ler();
+        if (id >= 0 && id < getQtdeContatos() && excluirTodosContatos(arquivo) && arquivo.abrirEscrita()) {
+            contatos.remove(id);
+            for (Contato c : contatos) {
+                arquivo.escreverLinha(c.getContatoFormatado());
+            }
+            arquivo.fecharArquivo();
+            result = true;
+        }
+        return result;
+    }
 }

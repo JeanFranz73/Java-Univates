@@ -18,4 +18,27 @@ public class ContatoDAOHelper {
         arquivo.fecharArquivo();
         return linhas;
     }
+
+    public boolean isOpcaoValida(int opc) {
+        boolean result = false;
+
+        if (opc == 1 || opc == 2 || opc == 3) {
+            result = true;
+        }
+
+        return result;
+    }
+
+    public boolean excluirTodosContatos(Arquivo arquivo) {
+        boolean result = false;
+        if (arquivo.abrirEscrita()) {
+            for (int i = 0; i < getQtdeContatos(); i++) {
+                arquivo.escreverLinha(null);
+            }
+            result = true;
+        }
+        arquivo.fecharArquivo();
+
+        return result;
+    }
 }

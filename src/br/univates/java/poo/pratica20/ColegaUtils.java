@@ -1,6 +1,6 @@
 package br.univates.java.poo.pratica20;
 
-import cerebro.Arquivo;
+import br.univates.pedro.Arquivo;
 import lombok.Getter;
 import lombok.Setter;
 
