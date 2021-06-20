@@ -19,7 +19,6 @@ public class ListaContatos extends JFrame {
     private JButton addContatoButton;
     private JTable listContatos;
     private JButton editContatoButton;
-    private JButton recarregarButton;
     private JButton deleteContatoButton;
     private DefaultTableModel model;
 

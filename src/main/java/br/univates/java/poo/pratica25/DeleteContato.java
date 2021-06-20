@@ -20,6 +20,7 @@ public class DeleteContato extends JFrame {
     private ContatoDAO dao;
 
     public DeleteContato() {
+        setLocationRelativeTo(new ListaContatos().getPanel());
         dao = new ContatoDAO();
     }
 
